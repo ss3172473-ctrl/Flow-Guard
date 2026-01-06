@@ -24,8 +24,8 @@ const SystemSection = () => {
                     style={{ opacity: opacity }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2>부모님과 함께하는 학습 케어</h2>
-                    <p>감시가 아니라, 아이의 학습 환경을 지키는 가장 확실한 방법입니다.</p>
+                    <h2>옆에 없어도, 딱 붙어있는 것처럼</h2>
+                    <p>카카오톡으로 받는 학습 알림으로 우리 아이를 지켜봐요.</p>
                 </motion.div>
 
                 <div className="kakao-mockup">
