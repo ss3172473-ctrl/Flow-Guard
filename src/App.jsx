@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
 import { Eye, Shield, Smartphone, ArrowRight, BarChart3, MessageSquare, Clock, Zap } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import heroImg from './assets/hero_child_eye.png';
@@ -7,7 +7,7 @@ import motherImg from './assets/mother_smiling.png';
 import webcamImg from './assets/webcam_child_face.png';
 import browserImg from './assets/study_browser_screen.png';
 import consultImg from './assets/consultation_premium.png';
-import { useState, useRef } from 'react';
+import aiConsultImg from './assets/ai_consult_robot.png';
 import './App.css';
 
 // Animation Variants
@@ -450,9 +450,7 @@ const SystemSection = () => {
   );
 };
 
-import aiConsultImg from './assets/ai_consult_robot.png';
-import { useScroll, useTransform, useSpring, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+
 
 // Animated Number Component
 const AnimatedNumber = ({ value }) => {
