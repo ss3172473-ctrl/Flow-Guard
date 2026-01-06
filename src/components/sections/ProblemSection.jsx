@@ -33,7 +33,7 @@ const ProblemSection = () => {
                         variants={cardVariants}
                     >
                         <h3>평균 집중력 실태</h3>
-                        <div className="stat-value">단 8초</div>
+                        <div className="stat-value">단 47초</div>
                         <p>스마트폰 중독으로 짧아진 뇌의 집중 시간</p>
                         <motion.div
                             className="chart-container"
