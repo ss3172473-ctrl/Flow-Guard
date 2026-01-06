@@ -28,12 +28,12 @@ const ProblemSection = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    {/* 새로운 카드: 청소년 과의존 위험군 */}
+                    {/* 새로운 카드: 스마트폰이 죽이는 집중력 */}
                     <motion.div
                         className="problem-card"
                         variants={cardVariants}
                     >
-                        <h3>청소년 과의존 위험군</h3>
+                        <h3>스마트폰이 무너뜨린 집중력</h3>
                         <div className="stat-value">40.1%</div>
                         <p>청소년 10명 중 4명이 스마트폰에 과의존</p>
                         <div className="stat-box" style={{
