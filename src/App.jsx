@@ -133,7 +133,7 @@ const ProblemSection = () => (
         className="section-header"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         <h2>우리 아이, 진짜 공부하고 있을까요?</h2>
@@ -145,7 +145,7 @@ const ProblemSection = () => (
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div
           className="problem-card"
@@ -158,7 +158,8 @@ const ProblemSection = () => (
             className="chart-container"
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
           >
             <ResponsiveContainer width="100%" height={200}>
               <AreaChart data={attentionData}>
@@ -192,8 +193,8 @@ const ProblemSection = () => (
             className="chart-container"
             initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
             whileInView={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <ResponsiveContainer width="100%" height={220}>
               <LineChart data={cliffData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
@@ -225,8 +226,8 @@ const ProblemSection = () => (
         className="golden-time-callout glass"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
       >
         <Clock className="icon" size={32} />
         <p>
@@ -245,7 +246,7 @@ const BetaResults = () => (
         className="section-header"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className="section-badge">REAL EVIDENCE</div>
         <h2>[실제 베타 테스터 1개월 변화 수치]</h2>
@@ -256,7 +257,7 @@ const BetaResults = () => (
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div className="beta-card" variants={itemVariants} whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(16, 185, 129, 0.2)" }}>
           <div className="beta-user">A학생 (초6)</div>
@@ -297,7 +298,7 @@ const SolutionSection = () => (
         className="solution-text"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         <div className="section-badge">AI SOLUTION</div>
@@ -334,7 +335,7 @@ const SolutionSection = () => (
         className="solution-visual"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         <div className="mockup-container">
@@ -377,7 +378,7 @@ const SystemSection = () => (
         className="section-header"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8 }}
       >
         <h2>상위 1%의 습관, '알림 서비스'</h2>
@@ -389,7 +390,7 @@ const SystemSection = () => (
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         {/* Message 1 */}
         <motion.div className="kakao-msg-wrapper" variants={itemVariants}>
@@ -449,7 +450,7 @@ import { useEffect, useRef } from "react";
 // Animated Number Component
 const AnimatedNumber = ({ value }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   const spring = useSpring(0, { mass: 0.8, stiffness: 75, damping: 15 });
   const display = useTransform(spring, (current) => Math.round(current));
 
@@ -472,7 +473,7 @@ const ReportSection = () => {
           className="report-card glass"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1 }}
         >
           <div className="report-header">
@@ -496,7 +497,7 @@ const ReportSection = () => {
                       strokeDasharray={circumference}
                       initial={{ strokeDashoffset: circumference }}
                       whileInView={{ strokeDashoffset: circumference * (1 - 0.88) }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, amount: 0.5 }}
                       transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
                       style={{ transform: "rotate(-90deg)", transformOrigin: "50% 50%" }}
                     />
@@ -525,7 +526,7 @@ const ReportSection = () => {
                     className="fill" 
                     initial={{ width: 0 }}
                     whileInView={{ width: '92%' }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                   />
                 </div>
@@ -555,7 +556,7 @@ const ReportSection = () => {
               className="traffic-light-timeline"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={{
                 hidden: { opacity: 0 },
                 visible: {
@@ -580,6 +581,7 @@ const ReportSection = () => {
     </section>
   );
 };
+
 
 const SocialProofSection = () => (
   <section className="social-proof">
