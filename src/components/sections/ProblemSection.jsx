@@ -19,10 +19,6 @@ const ProblemSection = () => {
                     <p style={{ fontSize: '1.3rem', color: '#334155', fontWeight: 500 }}>
                         책상 앞 3시간, 하지만 <strong style={{ color: '#ef4444', fontSize: '1.5rem' }}>진짜 몰입은 단 12분</strong>일 수 있습니다.
                     </p>
-                    <p style={{ fontSize: '1rem', color: '#64748b', marginTop: '16px', lineHeight: '1.6' }}>
-                        청소년 10명 중 4명(40.1%)이 스마트폰 과의존 위험군입니다. <br />
-                        <span style={{ fontSize: '0.85rem', opacity: 0.8 }}>출처: 과학기술정보통신부·한국지능정보사회진흥원(NIA) '2023 스마트폰 과의존 실태조사'</span>
-                    </p>
                 </motion.div>
 
                 <motion.div
@@ -32,6 +28,42 @@ const ProblemSection = () => {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
+                    {/* 새로운 카드: 청소년 과의존 위험군 */}
+                    <motion.div
+                        className="problem-card"
+                        variants={cardVariants}
+                    >
+                        <h3>청소년 과의존 위험군</h3>
+                        <div className="stat-value">40.1%</div>
+                        <p>청소년 10명 중 4명이 스마트폰에 과의존</p>
+                        <div className="stat-box" style={{
+                            marginTop: '30px',
+                            padding: '24px',
+                            background: 'rgba(239, 68, 68, 0.05)',
+                            borderRadius: '16px',
+                            border: '2px solid rgba(239, 68, 68, 0.1)'
+                        }}>
+                            <div style={{
+                                fontSize: '3rem',
+                                fontWeight: '800',
+                                color: '#ef4444',
+                                textAlign: 'center',
+                                marginBottom: '12px'
+                            }}>4/10</div>
+                            <p style={{
+                                textAlign: 'center',
+                                fontSize: '0.9rem',
+                                color: '#64748b',
+                                lineHeight: '1.5'
+                            }}>만 10~19세 청소년 중<br />스마트폰 과의존 위험군</p>
+                        </div>
+                        <p className="card-footer" style={{ marginTop: '20px' }}>집중력 저하의 근본 원인</p>
+                        <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>
+                            출처: 과기정통부·NIA '2023 스마트폰 과의존 실태조사'
+                        </p>
+                    </motion.div>
+
+
                     <motion.div
                         className="problem-card"
                         variants={cardVariants}
