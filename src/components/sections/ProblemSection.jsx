@@ -19,6 +19,10 @@ const ProblemSection = () => {
                     <p style={{ fontSize: '1.3rem', color: '#334155', fontWeight: 500 }}>
                         책상 앞 3시간, 하지만 <strong style={{ color: '#ef4444', fontSize: '1.5rem' }}>진짜 몰입은 단 12분</strong>일 수 있습니다.
                     </p>
+                    <p style={{ fontSize: '1rem', color: '#64748b', marginTop: '16px', lineHeight: '1.6' }}>
+                        청소년 10명 중 4명(40.1%)이 스마트폰 과의존 위험군입니다. <br />
+                        <span style={{ fontSize: '0.85rem', opacity: 0.8 }}>출처: 과학기술정보통신부·한국지능정보사회진흥원(NIA) '2023 스마트폰 과의존 실태조사'</span>
+                    </p>
                 </motion.div>
 
                 <motion.div
@@ -62,6 +66,9 @@ const ProblemSection = () => {
                             </ResponsiveContainer>
                         </motion.div>
                         <p className="card-footer">자극적인 미디어에 중독된 '팝콘 브레인' 현상</p>
+                        <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '8px', fontStyle: 'italic' }}>
+                            출처: UC Irvine 글로리아 마크(Gloria Mark) 교수 팀 2023년 연구
+                        </p>
                     </motion.div>
 
                     <motion.div
