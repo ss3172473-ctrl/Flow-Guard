@@ -52,12 +52,11 @@ const attentionData = [
 ];
 
 const cliffData = [
-  { grade: '초등', score: 95 },
-  { grade: '초6', score: 92 },
-  { grade: '중1', score: 85 },
-  { grade: '중2', score: 65 },
-  { grade: '중3', score: 45 },
-  { grade: '고1', score: 30 },
+  { grade: '초등', score: 98 },
+  { grade: '중1', score: 90 },
+  { grade: '중2', score: 55 },
+  { grade: '중3', score: 38 },
+  { grade: '고1', score: 22 },
 ];
 
 function App() {
@@ -191,21 +190,26 @@ const ProblemSection = () => (
           <p>심층 집중력 부재로 인한 성적 급락 곡선</p>
           <motion.div
             className="chart-container"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0 }}
+            whileInView={{ clipPath: 'inset(0 0% 0 0)', opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
           >
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={cliffData}>
-                <XAxis dataKey="grade" stroke="#64748B" />
-                <Tooltip />
+            <ResponsiveContainer width="100%" height={220}>
+              <LineChart data={cliffData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                <XAxis dataKey="grade" stroke="#64748B" fontSize={12} tickLine={false} axisLine={false} />
+                <Tooltip
+                  contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
+                  labelStyle={{ fontWeight: 700, color: '#0F172A' }}
+                />
                 <Line
-                  type="step"
+                  type="monotone"
                   dataKey="score"
                   stroke="#ef4444"
-                  strokeWidth={3}
-                  dot={{ r: 6, fill: '#ef4444' }}
-                  animationDuration={2000}
+                  strokeWidth={4}
+                  dot={{ r: 6, fill: '#ef4444', strokeWidth: 2, stroke: '#fff' }}
+                  activeDot={{ r: 8, strokeWidth: 0 }}
+                  animationDuration={2500}
                 />
               </LineChart>
             </ResponsiveContainer>
