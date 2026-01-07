@@ -1,3 +1,5 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import review1 from '../../assets/review_capture_1.png';
 import review2 from '../../assets/review_capture_2.png';
 import review3 from '../../assets/review_capture_3.png';
