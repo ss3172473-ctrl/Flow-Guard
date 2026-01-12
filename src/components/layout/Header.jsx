@@ -4,12 +4,13 @@ import { Shield } from 'lucide-react';
 const Header = () => (
     <header className="header glass">
         <div className="container header-content">
-            <div className="logo">
+            <div className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ cursor: 'pointer' }}>
                 <Shield size={24} className="logo-icon" />
                 <span>순공시간</span>
             </div>
             <nav className="desktop-nav">
                 <a href="#problem">위험성</a>
+                <a href="#pricing">가격 및 플랜</a>
                 <a href="#solution">AI솔루션</a>
                 <a href="#system">시스템</a>
                 <a href="#report">리포트</a>

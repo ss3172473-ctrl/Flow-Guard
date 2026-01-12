@@ -5,6 +5,7 @@ import HeroSection from './components/sections/HeroSection';
 import ProblemSection from './components/sections/ProblemSection';
 import ImpactBridge from './components/sections/ImpactBridge';
 import BetaResults from './components/sections/BetaResults';
+import PricingSection from './components/sections/PricingSection';
 import SolutionSection from './components/sections/SolutionSection';
 import SystemSection from './components/sections/SystemSection';
 import ReportSection from './components/sections/ReportSection';
@@ -25,6 +26,7 @@ function App() {
         <SystemSection />
         <ReportSection />
         <SocialProofSection />
+        <PricingSection />
         <ConsultationForm />
       </main>
       <Footer />
